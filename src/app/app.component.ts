@@ -46,6 +46,7 @@ export class AppComponent {
       return;
     }
 
+    // cachs 1
     // const search = this.cities.filter((item) => item.cityName === city);
     // console.log(search);
 
@@ -53,6 +54,7 @@ export class AppComponent {
     //   this.districts = search[0].district;
     // }
 
+    // cachs 2
     this.districts =
       this.cities.find((item) => item.cityName === city)?.district || [];
   }
