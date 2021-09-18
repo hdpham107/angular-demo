@@ -1,4 +1,17 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<input type="text" [(ngModel)]="email" placeholder="Email" />
+<br />
+<input type="text" #fullname placeholder="Full name" />
+<button (click)="DisplayName(fullname)">Submit</button>
+
+<h2>Email: {{ email }}</h2>
+<h2>Full name: {{ name }}</h2>
+<div [ngClass]="{ 'ha-gia': gia < 10 }">{{ gia }}</div>
+<br />
+<select id="city" (change)="changeCity($event)">
+  <option *ngFor="let city of cities" value="{{ city.cityName }}">
+    {{ city.cityName }}
+  </option>
+</select>
+<select id="district">
+  <option *ngFor="let district of districts" value="{{district}}">{{district}}</option>
+</select>
